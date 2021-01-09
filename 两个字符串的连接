@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+void myscat(char *p,char *q);
+void main()							 
+{	
+	char s1[80],s2[30]; 
+	printf("请输入字符串1：\n");
+	gets(s1);  
+	printf("请输入字符串2：\n");
+	gets(s2); 		
+            myscat(s1,s2);
+	printf("连接后的字符串：\n");
+	puts(s1);			
+system("pause");
+}           
+void myscat(char *p,char *q)
+{
+	for(;*p!=0;p++)	
+		;
+	while(*q!=0)		
+	{	
+		*p=*q;
+		p++;
+		q++;
+	}
+	*p='\0';							
+}
